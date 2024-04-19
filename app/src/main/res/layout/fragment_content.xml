@@ -160,7 +160,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:text="my tenants(for landlord users)"
+                            android:text="tenants' requests(for landlord users)"
                             android:textColor="#333333"
                             android:textSize="16dp" />
 

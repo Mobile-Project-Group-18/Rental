@@ -89,7 +89,7 @@ public class OrderMessageActivity extends BaseActivity {
 		try {
 			orderModel = (ApplyModel) this.getIntent().getSerializableExtra("msg");
 			houseName.setText(orderModel.getApplyHouseName());
-			houseMoney.setText(orderModel.getApplyHouseMoney()+"元/月");
+			houseMoney.setText(orderModel.getApplyHouseMoney()+"EURO/Month");
 			userName.setText(orderModel.getUserMessage().getUname());
 			userPhone.setText(orderModel.getUserMessage().getUphone());
 			mtvTime.setText(orderModel.getApplyTime());
@@ -101,13 +101,13 @@ public class OrderMessageActivity extends BaseActivity {
 				mbtnNo.setBackgroundResource(R.drawable.btn_no_hui);
 				mbtnNo.setFocusable(false);
 				mbtnNo.setClickable(false);
-				mbtnNo.setText("已经拒绝租客请求");
+				mbtnNo.setText("Appointment request refused");
 			} else if (orderModel.getApplyState().equals("2")) {
 				mbtnNo.setVisibility(View.GONE);
 				mbtnOk.setBackgroundResource(R.drawable.btn_no_hui);
 				mbtnOk.setFocusable(false);
 				mbtnOk.setClickable(false);
-				mbtnOk.setText("已经同意租客请求");
+				mbtnOk.setText("Appointment requst accepted");
 			}
 		} catch (Exception e) {
 		}

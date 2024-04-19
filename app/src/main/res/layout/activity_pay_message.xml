@@ -27,7 +27,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginTop="30dp"
                 android:paddingLeft="10dp"
-                android:text="房源信息"
+                android:text="Rental Info"
                 android:textColor="#666666"
                 android:textSize="18dp" />
 
@@ -50,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:gravity="left|center_vertical"
-                        android:text="房源价格："
+                        android:text="Price: "
                         android:textColor="#333333"
                         android:textSize="16dp" />
 
@@ -63,7 +63,7 @@
                         android:background="@null"
                         android:gravity="center_vertical"
                         android:paddingLeft="10dp"
-                        android:text="66元"
+                        android:text="EURO"
                         android:textColor="#ff0000"
                         android:textSize="16dp" />
                 </LinearLayout>
@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:gravity="left|center_vertical"
-                        android:text="房源名称："
+                        android:text="Name"
                         android:textColor="#333333"
                         android:textSize="16dp" />
 
@@ -180,7 +180,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/select_btn"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="确认租房申请"
+                    android:text="Confirm your rental application"
                     android:textColor="@color/white"
                     android:textSize="15dp" />
             </LinearLayout>

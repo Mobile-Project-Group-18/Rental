@@ -99,7 +99,7 @@ public class HouseMessageActivity extends BaseActivity  {
 		mIvBack.setOnClickListener(this);
 		mbtnPay.setOnClickListener(this);
 		infor_image.setOnClickListener(this);
-		mTvTitle.setText("房屋详情");
+		mTvTitle.setText("Rental details");
 
 	}
 
@@ -109,12 +109,12 @@ public class HouseMessageActivity extends BaseActivity  {
 		try {
 			houseModel = (HouseModel) this.getIntent().getSerializableExtra("msg");
 			mtvName.setText(houseModel.getHouseName());
-			mtvMoney.setText(houseModel.getHouseMoney()+"元/月");
+			mtvMoney.setText(houseModel.getHouseMoney()+"EURO/Month");
 			mtvPhone.setText(houseModel.getHousePhone());
 			mtvTime.setText(houseModel.getHouseCreatime());
 			metMessage.setText(houseModel.getHouseMessage());
 			
-			mtvShopPrice.setText(houseModel.getHouseMoney()+"元");
+			mtvShopPrice.setText(houseModel.getHouseMoney()+"EURO");
 			
 			Picasso.with(this).load(Consts.URL_IMAGE_LOCAL + houseModel.getHouseImage()).placeholder(R.drawable.default_drawable_show_pictrue)
 			.into(infor_image);

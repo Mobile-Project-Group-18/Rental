@@ -38,7 +38,7 @@
                     android:layout_height="fill_parent"
                     android:layout_alignParentRight="true"
                     android:background="@color/main_color"
-                    android:text="申请租房"
+                    android:text="Apply"
                     android:textColor="#ffffff" />
 
                 <LinearLayout
@@ -50,7 +50,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="租房总价："
+                        android:text="Price: "
                         android:textColor="#333333"
                         android:textSize="16dp" />
 
@@ -58,7 +58,7 @@
                         android:id="@+id/mtvShopPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0元"
+                        android:text="EURO"
                         android:textColor="#ff0000"
                         android:textSize="20dp" />
                 </LinearLayout>
@@ -107,7 +107,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="房源名称："
+                                android:text="Rental name: "
                                 android:textColor="#333333"
                                 android:textSize="16dp" />
 
@@ -163,7 +163,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="联系方式："
+                                android:text="Contact Number: "
                                 android:textColor="#333333"
                                 android:textSize="16dp" />
 
@@ -191,7 +191,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="发布时间："
+                                android:text="Publish time: "
                                 android:textColor="#333333"
                                 android:textSize="16dp" />
 
@@ -219,7 +219,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="房源简介："
+                                android:text="Description: "
                                 android:textColor="#333333"
                                 android:textSize="16dp" />
 

@@ -69,7 +69,7 @@ public class PayMessageActivity extends BaseActivity {
 		mtvPrice = (TextView) findViewById(R.id.mtvPrice);
 		mIvBack = (ImageView) findViewById(R.id.mIvBack);
 		mTvTitle = (TextView) findViewById(R.id.mTvTitle);
-		mTvTitle.setText("支付确认");
+		mTvTitle.setText("Confirm appointment");
 		mIvBack.setVisibility(View.VISIBLE);
 		mIvBack.setOnClickListener(this);
 		mPay.setOnClickListener(this);
@@ -81,7 +81,7 @@ public class PayMessageActivity extends BaseActivity {
 
 		userModel = (UserModel) MemberUserUtils.getBean(this, "user_messgae");
 
-		mtvPrice.setText(shopModel.getHouseMoney()+"元/月");
+		mtvPrice.setText(shopModel.getHouseMoney()+"EURO/Month");
 		mtvName.setText(shopModel.getHouseName());
 		
 		mrdChoice.setOnCheckedChangeListener(new OnCheckedChangeListener() {

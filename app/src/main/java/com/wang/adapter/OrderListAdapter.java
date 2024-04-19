@@ -60,15 +60,15 @@ public class OrderListAdapter extends BaseAdapter {
 		// try {
 
 		if (list_result.get(position).getApplyState().equals("1")) {
-			holder.mTvTitle.setText(list_result.get(position).getApplyHouseName() + "(待处理)");
+			holder.mTvTitle.setText(list_result.get(position).getApplyHouseName() + "(Pending)");
 		} else if (list_result.get(position).getApplyState().equals("2")) {
-			holder.mTvTitle.setText(list_result.get(position).getApplyHouseName() + "(已同意)");
+			holder.mTvTitle.setText(list_result.get(position).getApplyHouseName() + "(Accepted)");
 		} else {
-			holder.mTvTitle.setText(list_result.get(position).getApplyHouseName() + "(已拒绝)");
+			holder.mTvTitle.setText(list_result.get(position).getApplyHouseName() + "(Refused)");
 		}
 
-		holder.mTvMoney.setText("预约价位：" + list_result.get(position).getApplyHouseMoney() + "元/月");
-		holder.mtvPhone.setText("预约时间：" + list_result.get(position).getApplyTime());
+		holder.mTvMoney.setText("Price:" + list_result.get(position).getApplyHouseMoney() + "EURO/Month");
+		holder.mtvPhone.setText("Time:" + list_result.get(position).getApplyTime());
 		if (!TextUtils.isEmpty(list_result.get(position).getHouseMessage().getHouseImage())) {
 			Picasso.with(mContext).load(Consts.URL_IMAGE_LOCAL + list_result.get(position).getHouseMessage().getHouseImage())
 					.placeholder(R.drawable.default_drawable_show_pictrue).into(holder.mivShop);

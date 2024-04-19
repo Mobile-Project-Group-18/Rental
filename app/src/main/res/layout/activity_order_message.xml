@@ -117,7 +117,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/select_btn"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="同意租客请求"
+                android:text="Accept the request by the tenant"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
 
@@ -130,7 +130,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/select_btn"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="拒绝租客请求"
+                android:text="Refuse the request by the tenant"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
         </LinearLayout>

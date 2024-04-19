@@ -77,7 +77,7 @@ public class MyZuKeActivity extends BaseActivity {
 		mIvBack = (ImageView) findViewById(R.id.mIvBack);
 		mTvTitle = (TextView) findViewById(R.id.mTvTitle);
 		state = this.getIntent().getStringExtra("state");
-		mTvTitle.setText("Tenants' appointmentssss");
+		mTvTitle.setText("Appointment requests from tenants");
 		mIvBack.setVisibility(View.VISIBLE);
 		mIvBack.setOnClickListener(this);
 		mIvStu.setOnClickListener(this);
