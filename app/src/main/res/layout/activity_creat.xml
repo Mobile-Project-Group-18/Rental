@@ -33,7 +33,7 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="房源名称："
+                    android:text="Name: "
                     android:textColor="#333333"
                     android:textSize="16dp" />
 
@@ -44,7 +44,7 @@
                     android:layout_centerVertical="true"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:hint="请输入房源名称"
+                    android:hint="Enter the name of your rental"
                     android:paddingLeft="10dp"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -63,7 +63,7 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="房源类型："
+                    android:text="Category:"
                     android:textColor="#333333"
                     android:textSize="16dp" />
 
@@ -75,7 +75,7 @@
                     android:background="@null"
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="请选择房源类型"
+                    android:text="Select the type of your rental"
                     android:textColor="#666666"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -93,7 +93,7 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="房源价格："
+                    android:text="Set a price: "
                     android:textColor="#333333"
                     android:textSize="16dp" />
 
@@ -105,7 +105,7 @@
                     android:background="@null"
                     android:gravity="center_vertical"
                     android:inputType="number"
-                    android:hint="请输入房源价格"
+                    android:hint="Enter a price"
                     android:paddingLeft="10dp"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -125,7 +125,7 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="联系方式："
+                    android:text="Contact Number"
                     android:textColor="#333333"
                     android:textSize="16dp" />
 
@@ -135,7 +135,7 @@
                     android:layout_height="45dp"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:hint="请输联系方式"
+                    android:hint="Enter your PH NO."
                     android:inputType="number"
                     android:paddingLeft="10dp"
                     android:textColor="#666666"
@@ -156,7 +156,7 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="房源描述："
+                    android:text="Description: "
                     android:textColor="#333333"
                     android:textSize="16dp" />
 
@@ -166,7 +166,7 @@
                     android:layout_height="45dp"
                     android:background="@null"
                     android:gravity="center_vertical"
-                    android:hint="请添加房源描述信息"
+                    android:hint="Add the info about your rental here"
                     android:paddingLeft="10dp"
                     android:textColor="#666666"
                     android:textSize="14dp" />
@@ -206,7 +206,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/select_btn"
         android:gravity="center_vertical|center_horizontal"
-        android:text="上传"
+        android:text="Upload your AD"
         android:textColor="@color/white"
         android:textSize="15dp" />
 
