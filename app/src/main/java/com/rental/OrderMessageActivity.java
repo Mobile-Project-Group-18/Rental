@@ -81,7 +81,7 @@ public class OrderMessageActivity extends BaseActivity {
 		mbtnOk.setOnClickListener(this);
 		mbtnNo.setOnClickListener(this);
 		mIvBack.setOnClickListener(this);
-		mTvTitle.setText("预约详情");
+		mTvTitle.setText("Appointment request details");
 	}
 
 	@Override

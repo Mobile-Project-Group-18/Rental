@@ -37,7 +37,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="15dp"
-                    android:text="房源信息："
+                    android:text="Rental Info: "
                     android:textColor="#666666"
                     android:textSize="18dp" />
 
@@ -76,7 +76,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="15dp"
-                    android:text="预约信息："
+                    android:text="Appointment info: "
                     android:textColor="#666666"
                     android:textSize="18dp" />
 
@@ -117,7 +117,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/select_btn"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="Accept the request by the tenant"
+                android:text="Accept the request from this tenant"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
 
@@ -130,7 +130,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/select_btn"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="Refuse the request by the tenant"
+                android:text="Refuse the request from this tenant"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
         </LinearLayout>
