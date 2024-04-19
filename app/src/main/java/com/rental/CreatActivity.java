@@ -123,7 +123,7 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 		horizontalscrollview = (HorizontalScrollView) findViewById(R.id.horizontalscrollview);
 		mIvBack = (ImageView) findViewById(R.id.mIvBack);
 		mTvTitle = (TextView) findViewById(R.id.mTvTitle);
-		mTvTitle.setText("publish the advertisement of the house");
+		mTvTitle.setText("publish advertisement of your house/apartment");
 		mIvBack.setVisibility(View.VISIBLE);
 		mIvBack.setOnClickListener(this);
 		mSubmit.setOnClickListener(this);
