@@ -40,12 +40,12 @@
         "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\drawable\\square_indicator_unselected.xml"
     },
     {
-        "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_icon_point.png.flat",
-        "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\drawable-hdpi\\icon_point.png"
-    },
-    {
         "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wheel_bg.xml.flat",
         "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_icon_point.png.flat",
+        "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\drawable-hdpi\\icon_point.png"
     },
     {
         "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon_xianzhi_1.jpg.flat",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\layout\\login_item.xml"
     },
     {
-        "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\anim_rotate_repeat.xml.flat",
-        "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\anim\\rotate_repeat.xml"
-    },
-    {
         "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tx_5.jpg.flat",
         "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\drawable-hdpi\\tx_5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\anim_rotate_repeat.xml.flat",
+        "source": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\src\\main\\res\\anim\\rotate_repeat.xml"
     },
     {
         "merged": "C:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\res\\merged\\debug\\drawable_actionsheet_middle_selector.xml.flat",
