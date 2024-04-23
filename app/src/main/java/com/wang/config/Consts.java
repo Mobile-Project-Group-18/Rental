@@ -31,11 +31,11 @@ public class Consts {
 	 * 访问地址(wxh)
 	 */
 	public final static String URL = "http://87.100.217.139:8080/RentalService/";
-	public static final String requestURL = "http://192.168.56.1:8080/RentalService/servlet/FileImageUploadServlet";
-	public static final String requestURL_UPDATE = "http://192.168.56.1:8080/RentalService/servlet/FileImageUploadUpdateServlet";
-	public final static String URL_IMAGE = "http://192.168.56.1:8080/RentalService/upload/";
+	public static final String requestURL = "http:/87.100.217.139:8080/RentalService/servlet/FileImageUploadServlet";
+	public static final String requestURL_UPDATE = "http://87.100.217.139:8080/RentalService/servlet/FileImageUploadUpdateServlet";
+	public final static String URL_IMAGE = "http://87.100.217.139:8080/RentalService/upload/";
 
-	public final static String URL_IMAGE_LOCAL = "http://87.100.217.139:8080/yn/upload/";
+	public final static String URL_IMAGE_LOCAL = "http://87.100.217.139:8080/RentalService/upload/";
 	
 
 	/**

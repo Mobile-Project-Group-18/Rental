@@ -150,8 +150,8 @@ public class SelectImagesActivity extends BaseActivity {
 		mIvStu = (TextView) findViewById(R.id.mIvStu);
 		mIvBack = (ImageView) findViewById(R.id.mIvBack);
 		mTvTitle = (TextView) findViewById(R.id.mTvTitle);
-		mTvTitle.setText("选择照片");
-		mIvStu.setText("确定");
+		mTvTitle.setText("Select a photo for the rental AD");
+		mIvStu.setText("Confirm");
 		mIvBack.setVisibility(View.VISIBLE);
 		mIvStu.setVisibility(View.VISIBLE);
 		mIvBack.setOnClickListener(this);
