@@ -38,9 +38,9 @@ import com.rental.R;
 
 /**
  * 精选
- * 
- * @author ansen
- * @create time 2016-04-19
+ *
+ * @author wangkui
+
  */
 public class MainFragment extends BaseFragment implements Observer {
 
@@ -61,7 +61,7 @@ public class MainFragment extends BaseFragment implements Observer {
 	private TextView mtvSearch;
 
 	private int choiceFlag = 0;
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		rootView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_selected, null);
@@ -80,25 +80,25 @@ public class MainFragment extends BaseFragment implements Observer {
 		mllNomessage = (LinearLayout) rootView.findViewById(R.id.mllNomessage);
 		mListMessage = (ListView) rootView.findViewById(R.id.mListMessage);
 		mtvTipMessage = (TextView) rootView.findViewById(R.id.mtvTipMessage);
-		
+
 		metName.addTextChangedListener(new TextWatcher() {
-			
+
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
-			
+
 				if(s.length()==0){
 					listMessage(false);
 				}
@@ -127,14 +127,14 @@ public class MainFragment extends BaseFragment implements Observer {
 		listSearchMsg(true, metName.getText().toString());
 		hideSoft(getActivity(), metName);
 	}
-	
+
 	private void listSearchMsg(boolean isShow, String searchmessage) {
 		AjaxParams params = new AjaxParams();
 		params.put("action_flag", "queryMessage");
 		params.put("searchmessage",searchmessage);
 		httpPost(Consts.URL + Consts.APP.HouseAction, params, Consts.actionId.resultFlag, isShow, "正在加载...");
 	}
-	
+
 
 	private void listMessage(boolean isShow) {
 		AjaxParams params = new AjaxParams();
@@ -160,7 +160,7 @@ public class MainFragment extends BaseFragment implements Observer {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos, long arg3) {
 
-				
+
 				if(choiceFlag==0){
 					Intent intent = new Intent(getActivity(), HouseMessageActivity.class);
 					intent.putExtra("msg", list_result.get(pos));
@@ -170,7 +170,7 @@ public class MainFragment extends BaseFragment implements Observer {
 					intent.putExtra("msg", list_result_search.get(pos));
 					getActivity().startActivity(intent);
 				}
-				
+
 			}
 		});
 
@@ -181,38 +181,38 @@ public class MainFragment extends BaseFragment implements Observer {
 		super.callBackSuccess(entry, actionId);
 
 		switch (actionId) {
-		case Consts.actionId.resultCode:
-			choiceFlag =0;
-			if (null != entry.getData() && !TextUtils.isEmpty(entry.getData())) {
-				String jsonMsg = entry.getData().substring(1, entry.getData().length() - 1);
+			case Consts.actionId.resultCode:
+				choiceFlag =0;
+				if (null != entry.getData() && !TextUtils.isEmpty(entry.getData())) {
+					String jsonMsg = entry.getData().substring(1, entry.getData().length() - 1);
 
-				if (null != jsonMsg && !TextUtils.isEmpty(jsonMsg)) {
-					list_result.clear();
-					list_result = mGson.fromJson(entry.getData(), new TypeToken<List<HouseModel>>() {
-					}.getType());
-					LookListAdapter noticeAdapter = new LookListAdapter(getActivity(), list_result);
-					mListMessage.setAdapter(noticeAdapter);
-				} else {
-					mllNomessage.setVisibility(View.VISIBLE);
+					if (null != jsonMsg && !TextUtils.isEmpty(jsonMsg)) {
+						list_result.clear();
+						list_result = mGson.fromJson(entry.getData(), new TypeToken<List<HouseModel>>() {
+						}.getType());
+						LookListAdapter noticeAdapter = new LookListAdapter(getActivity(), list_result);
+						mListMessage.setAdapter(noticeAdapter);
+					} else {
+						mllNomessage.setVisibility(View.VISIBLE);
+					}
 				}
-			}
-			break;
-		case Consts.actionId.resultFlag:
-			choiceFlag =1;
-			if (null != entry.getData() && !TextUtils.isEmpty(entry.getData())) {
-				String jsonMsg = entry.getData().substring(1, entry.getData().length() - 1);
+				break;
+			case Consts.actionId.resultFlag:
+				choiceFlag =1;
+				if (null != entry.getData() && !TextUtils.isEmpty(entry.getData())) {
+					String jsonMsg = entry.getData().substring(1, entry.getData().length() - 1);
 
-				if (null != jsonMsg && !TextUtils.isEmpty(jsonMsg)) {
-					list_result_search.clear();
-					list_result_search = mGson.fromJson(entry.getData(), new TypeToken<List<HouseModel>>() {
-					}.getType());
-					LookListAdapter noticeAdapter = new LookListAdapter(getActivity(), list_result_search);
-					mListMessage.setAdapter(noticeAdapter);
-				} else {
-					mllNomessage.setVisibility(View.VISIBLE);
+					if (null != jsonMsg && !TextUtils.isEmpty(jsonMsg)) {
+						list_result_search.clear();
+						list_result_search = mGson.fromJson(entry.getData(), new TypeToken<List<HouseModel>>() {
+						}.getType());
+						LookListAdapter noticeAdapter = new LookListAdapter(getActivity(), list_result_search);
+						mListMessage.setAdapter(noticeAdapter);
+					} else {
+						mllNomessage.setVisibility(View.VISIBLE);
+					}
 				}
-			}
-			break;
+				break;
 		}
 
 	}
@@ -239,13 +239,8 @@ public class MainFragment extends BaseFragment implements Observer {
 
 	@Override
 	public void update(Observable observable, Object data) {
-		list_result_update.clear();
-		HouseModel intersetModel = (HouseModel) data;
-		list_result_update.add(intersetModel);
-		list_result_update.addAll(list_result);
-		LookListAdapter noticeAdapter = new LookListAdapter(getActivity(), list_result_update);
-		mListMessage.setAdapter(noticeAdapter);
 
+		listMessage(true);
 	}
 
 }

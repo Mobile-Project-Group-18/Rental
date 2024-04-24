@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 23 10:06:14 EEST 2024
+#Wed Apr 24 12:33:52 EEST 2024
 2.base=C\:\\Users\\WANGKUI\\A705Rental\\Rental-App00\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 5.set=DEX
 0.path=classes.dex

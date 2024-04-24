@@ -69,14 +69,14 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 	// 图片上传表示位
 	private int imageFlagNumber = 0;
 	private int ctposNumber = 0;
-	
+
 	private EditText metMoney;
 	private EditText metName;
 	private EditText metMessage;
 	private EditText metPhone;
 	private List<CategoryModel> list_result = new ArrayList<CategoryModel>();
 	private DialogListMsg dialogListMsg;
-	
+
 	private Button mbtnCt;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -89,21 +89,21 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.mIvBack:
-			finish();
-			break;
-		case R.id.mbtnCt:
-			dialogListMsg.Show();
-			break;
-		case R.id.mSubmit:
+			case R.id.mIvBack:
+				finish();
+				break;
+			case R.id.mbtnCt:
+				dialogListMsg.Show();
+				break;
+			case R.id.mSubmit:
 
-			Log.e("pony_log", imageFlagNumber + "");
+				Log.e("pony_log", imageFlagNumber + "");
 
-			mdialog.show();
-			UploadFileTask uploadFileTask = new UploadFileTask(this);
-			uploadFileTask.execute(mListImage.get(imageFlagNumber));
+				mdialog.show();
+				UploadFileTask uploadFileTask = new UploadFileTask(this);
+				uploadFileTask.execute(mListImage.get(imageFlagNumber));
 
-			break;
+				break;
 
 		}
 	}
@@ -132,11 +132,11 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 
 	@Override
 	public void initData() {
-		
+
 		MessageAction(true);
 		ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(this));
 		initSelectedGridView();
-		
+
 		dialogListMsg.show_listview().setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -302,7 +302,7 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 		params.put("image", imagePath.substring(0, imagePath.length()-1));
 		params.put("houseCategory",list_result.get(ctposNumber).getTypeId()+"");
 		params.put("houseCreatime",createTome);
-		httpPost(Consts.URL + Consts.APP.HouseAction, params, Consts.actionId.resultCode, isShow, "uploading...");
+		httpPost(Consts.URL + Consts.APP.HouseAction, params, Consts.actionId.resultCode, isShow, "正在上传...");
 
 	}
 
@@ -310,30 +310,30 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 	protected void callBackSuccess(ResponseEntry entry, int actionId) {
 		super.callBackSuccess(entry, actionId);
 		switch (actionId) {
-		case Consts.actionId.resultFlag:
-			if (null != entry.getData() && !TextUtils.isEmpty(entry.getData())) {
+			case Consts.actionId.resultFlag:
+				if (null != entry.getData() && !TextUtils.isEmpty(entry.getData())) {
 
-				String jsonMsg = entry.getData().substring(1, entry.getData().length() - 1);
-				if (null != jsonMsg && !TextUtils.isEmpty(jsonMsg)) {
-					list_result = mGson.fromJson(entry.getData(), new TypeToken<List<CategoryModel>>() {
-					}.getType());
-					PractitionersAdapter practitionersAdapter = new PractitionersAdapter(CreatActivity.this);
-					practitionersAdapter.setData(list_result);
-					dialogListMsg.show_listview().setAdapter(practitionersAdapter);
+					String jsonMsg = entry.getData().substring(1, entry.getData().length() - 1);
+					if (null != jsonMsg && !TextUtils.isEmpty(jsonMsg)) {
+						list_result = mGson.fromJson(entry.getData(), new TypeToken<List<CategoryModel>>() {
+						}.getType());
+						PractitionersAdapter practitionersAdapter = new PractitionersAdapter(CreatActivity.this);
+						practitionersAdapter.setData(list_result);
+						dialogListMsg.show_listview().setAdapter(practitionersAdapter);
+					}
 				}
-			}
-			break;
-		case Consts.actionId.resultCode:
+				break;
+			case Consts.actionId.resultCode:
 
-			mdialog.dismiss();
-			ToastUtil.show(CreatActivity.this, "successfully published!");
-			
-			String imagePath = "";
-			for (int i = 0; i < mListImage.size(); i++) {
-				String[] arrPath = mListImage.get(i).split("\\/");
-				imagePath = arrPath[arrPath.length - 1] + "," + imagePath;
-			}
-			
+				mdialog.dismiss();
+				ToastUtil.show(CreatActivity.this, "发布成功");
+
+				String imagePath = "";
+				for (int i = 0; i < mListImage.size(); i++) {
+					String[] arrPath = mListImage.get(i).split("\\/");
+					imagePath = arrPath[arrPath.length - 1] + "," + imagePath;
+				}
+
 //			params.put("houseName", metName.getText().toString());
 //			params.put("houseMoney", metMoney.getText().toString());
 //			params.put("housePhone",metPhone.getText().toString());
@@ -341,29 +341,19 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 //			params.put("userId",MemberUserUtils.getUid(this));
 //			params.put("image", imagePath.substring(0, imagePath.length()-1));
 //			params.put("houseCategory",list_result.get(ctposNumber).getTypeId()+"");
-			
-			
-			HouseModel  houseModel = new HouseModel();
-			houseModel.setHouseMoney(metMoney.getText().toString());
-			houseModel.setHouseName(metName.getText().toString());
-			houseModel.setHousePhone(metPhone.getText().toString());
-			houseModel.setHouseMessage(metMessage.getText().toString());
-			houseModel.setUserId(MemberUserUtils.getUid(this));
-			houseModel.setHouseImage(imagePath.substring(0, imagePath.length() - 1));
-			houseModel.setHouseCategory(list_result.get(ctposNumber).getTypeId()+"");
-			houseModel.setHouseCreatime(createTome);
-			houseModel.setHouseId( entry.getRepMsg());
-			houseModel.setTypeName(mbtnCt.getText().toString());
-			HouseObservable.getInstance().notifyStepChange(houseModel);
-			
-			
-			new Handler().postDelayed(new Runnable() {
-				@Override
-				public void run() {
-					finish();
-				}
-			}, 2000);
-			break;
+
+
+
+				HouseObservable.getInstance().notifyStepChange(null);
+
+
+				new Handler().postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						finish();
+					}
+				}, 2000);
+				break;
 		}
 	}
 
@@ -422,12 +412,12 @@ public class CreatActivity extends BaseActivity implements ImageItemClickListner
 		}
 
 	}
-	
+
 
 	private void MessageAction(boolean isShow) {
 		AjaxParams params = new AjaxParams();
 		params.put("action_flag", "listTypePhoneMessage");
 		httpPost(Consts.URL + Consts.APP.ShopAction, params, Consts.actionId.resultFlag, isShow, "loading...");
 	}
-	
+
 }

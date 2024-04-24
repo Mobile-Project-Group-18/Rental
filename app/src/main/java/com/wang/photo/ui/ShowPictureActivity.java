@@ -73,7 +73,7 @@ public class ShowPictureActivity extends BaseActivity implements PhotoViewAttach
 
 		mIvBack = (ImageView) findViewById(R.id.mIvBack);
 		mTvTitle = (TextView) findViewById(R.id.mTvTitle);
-		mTvTitle.setText("照片信息");
+		mTvTitle.setText("Photo details");
 		mIvBack.setVisibility(View.VISIBLE);
 		mIvBack.setOnClickListener(this);
 
